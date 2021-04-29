@@ -1,6 +1,7 @@
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Comment extends Model {}
+class Comment extends Model { }
 
 Comment.init({
     id: {
@@ -13,7 +14,7 @@ Comment.init({
         type: DataTypes.STRING,
         validate: {
 
-            len: [3]
+            len: [1]
         }
     },
     user_id: {
@@ -40,4 +41,5 @@ Comment.init({
     underscored: true,
     modelName: 'comment'
 });
+
 module.exports = Comment;
