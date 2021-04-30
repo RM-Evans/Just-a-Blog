@@ -1,0 +1,202 @@
+* {
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body,
+html {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	color: #333;
+}
+
+a {
+	text-decoration: none;
+	color: #225ca3;
+	font-weight: bold;
+	transition: color 0.1s;
+}
+
+.main-font {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.submit-btn {
+	background-color: steelblue;
+	border: 0;
+	margin-top: 15px;
+	padding: 2%;
+	color: white;
+	font-weight: bold;
+	transition: background-color 0.1s;
+	cursor: pointer;
+	border-radius: 5px;
+	width: 165px;
+}
+
+button:hover {
+	background-color: blueviolet;
+	transition: 0.5s;
+}
+
+.post-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+textarea,
+input {
+	padding: 0.5%;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+textarea:focus,
+input:focus {
+	outline: none;
+	border: 1px solid #3486eb;
+}
+
+textarea {
+	min-width: 75%;
+	min-height: 250px;
+}
+
+form label {
+	display: block;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.nav-btns {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+main {
+	/* flex: 1; */
+	padding: 2% 4%;
+}
+
+.create-link {
+	width: 75%;
+	border: 0.5px black;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	background-color: steelblue;
+}
+
+.new-blog-link {
+	margin: 25px 0;
+	text-align: right;
+}
+
+.past-blog-heading {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.create-btn {
+	width: 75%;
+	border: 0.5px black;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 10px;
+	color: white;
+	background-color: steelblue;
+}
+
+.delete-btn {
+	width: 75%;
+	border: 0.5px black;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 10px;
+	color: white;
+	background-color: rgb(255, 44, 44);
+}
+
+.create-link:hover {
+	background-color: darkslateblue;
+}
+
+.btn-no-style {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: none;
+	color: #225ca3;
+	font-size: 100%;
+	font-weight: bold;
+	transition: color 0.1s;
+	margin-left: 16px;
+}
+
+.btn-no-style:hover {
+	background: none;
+	color: #3486eb;
+}
+
+.delete-post-btn {
+	background-color: #d41414;
+}
+
+.delete-post-btn:hover {
+	background-color: #ff643d;
+}
+
+.post {
+	margin-bottom: 2%;
+	line-height: 150%;
+}
+
+.dashboard-blog {
+	margin: 5vh 0;
+}
+
+.comment-form {
+	margin-bottom: 5%;
+}
+
+.comment {
+	padding: 1%;
+	margin-bottom: 1%;
+}
+
+.comment:nth-child(odd) {
+	background-color: #fff5eb;
+}
+
+.comment .meta {
+	font-size: 90%;
+	margin-bottom: 0.5%;
+	opacity: 0.6;
+}
+
+.new-post-form input {
+	width: 300px;
+}
+
+.edit-post-form {
+	margin-bottom: 5%;
+}
+
+footer {
+	border-top: 1px solid #ccc;
+	display: flex;
+	justify-content: center;
+	padding: 1%;
+	font-size: 110%;
+}

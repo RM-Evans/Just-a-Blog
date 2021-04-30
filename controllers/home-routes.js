@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
+//const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 //const withAuth = require('../utils/auth');
 
@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     Post.findAll({
         attributes: [
             'id',
-            'post_url',
+            'post_body',
             'title',
             'created_at',
 
@@ -57,8 +57,8 @@ router.get('/login', (req, res) => {
 
 //get signup page when link clicked
 router.get('/signup', (req, res) => {
-    res.render('signup')
-})
+    res.render('signup');
+});
 
 // Route for page to create a new post
 router.get('/new-post', (req, res) => {
@@ -76,7 +76,7 @@ router.get('/post/:id', (req, res) => {
         },
         attributes: [
             'id',
-            'post_url',
+            'post_body',
             'title',
             'created_at',
 
@@ -123,7 +123,7 @@ router.get('/post/:id', (req, res) => {
         },
         attributes: [
             'id',
-            'post_url',
+            'post_body',
             'title',
             'created_at',
 

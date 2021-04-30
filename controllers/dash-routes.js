@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 
     Post.findAll({
         where: {
-            creator_id: req.session.user_id
+            user_id: req.session.user_id
         },
         order: [['created_at', 'DESC']],
         include: [
@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
             },
             {
                 model: Comment,
-                attributes: ['content', 'user_id'],
+                attributes: ['comment_text', 'user_id'],
                 include: [
                     {
                         model: User,
@@ -46,11 +46,15 @@ router.get('/edit/:id', (req, res) => {
         attributes: [
             'id',
             'title',
-            'creator_id',
-            'content',
+            'post_body',
+            'user_id',
             'created_at',
         ],
         include: [
+            {
+                model: User,
+                attributes: ['username']
+            },
             {
                 model: Comment,
                 attributes: ['content', 'user_id', 'post_id', 'created_at'],
@@ -58,14 +62,10 @@ router.get('/edit/:id', (req, res) => {
                     model: User,
                     attributes: ['username']
                 }
-            },
-            {
-                model: User,
-                attributes: ['username']
             }
         ]
-    }).
-        then(postData => {
+    })
+        .then(postData => {
             if (postData) {
                 const post = postData.get({ plain: true });
 
