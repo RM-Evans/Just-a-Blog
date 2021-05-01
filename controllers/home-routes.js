@@ -60,13 +60,14 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-// Route for page to create a new post
+//create partial for new post
 router.get('/new-post', (req, res) => {
+    console.log('dasdasdasdasdasdasdsad');
     if (req.session.loggedIn) {
         res.render('new-post', { loggedIn: true });
     }
 });
-
+//make post call to 
 
 // get single post page
 router.get('/post/:id', (req, res) => {
