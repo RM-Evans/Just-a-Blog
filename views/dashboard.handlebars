@@ -2,7 +2,7 @@
     <div class='new-post-link'>
         <a href='/new-post' class='create-link'>New Post</a>
     </div>
-    <div class='is-size-4 past-blog-heading'>
+    <div class='is-size-4 past-post-heading'>
         <h3>Your Past Posts</h3>
     </div>
 
@@ -10,18 +10,18 @@
     <article class="post">
         <div class="card">
             <div class='card-header'>
-                <span class='card-header-title is-centered'><a href="/blog/{{id}}">{{title}}</a></span>
+                <span class='card-header-title is-centered'><a href="/post/{{id}}">{{title}}</a></span>
             </div>
             <div class="card-content content">
                 <span>{{content}}</span>
             </div>
-            <div class='card-content username'>By: {{User.username}}</div>
+            <div class='card-content username'>By: {{user.username}}</div>
             <div class='card-footer'>
-                <div class='card-footer-item time-stamp'>{{timeStamp createdAt}}</div>
+                <div class='card-footer-item time-stamp'>{{format_date createdAt}}</div>
                 <a class='card-footer-item' href="/dashboard/edit/{{id}}">
                     <div>Edit Blog</div>
                 </a>
-                <a class='card-footer-item' href="/blog/{{id}}">
+                <a class='card-footer-item' href="/post/{{id}}">
                     <div>Comments: {{Comments.length}}</div>
                 </a>
 

@@ -1,6 +1,6 @@
-async function commentComment(event) {
+async function createComment(event) {
     event.preventDefault();
-
+    console.log(event);
     const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
 
     const post_id = window.location.toString().split('/')[
@@ -29,4 +29,4 @@ async function commentComment(event) {
     }
 }
 
-document.querySelector('.comment-form').addEventListener('submit', createComment);
+document.querySelector('#comment-form').addEventListener('submit', createComment);

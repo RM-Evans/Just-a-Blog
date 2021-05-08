@@ -1,18 +1,26 @@
 {{!-- {{> post-info post}} --}}
 
-{{#if loggedIn}}
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
-    </div>
 
+<article class="post">
     <div>
-        <button type="submit">add comment</button>
-        <button type="button" class="upvote-btn">upvote</button>
+        <span class='title'>Title: {{post.title}}</span>
+    </div>
+    <div class="content">
+        <span>Blog: {{post.post_body}}</span>
+    </div>
+    <div class='username'>Blogger: {{post.user.username}}</div>
+    <div class='time-stamp'>Posted: {{format_date post.created_at}}</div>
+</article>
+
+<form id="comment-form">
+    <div>
+        <label for="comment-text">Add a New Comment:</label>
+        <textarea name="comment-body" class='comment-text'></textarea>
+    </div>
+    <div>
+        <button type="submit" class='create-btn'>Add Comment</button>
     </div>
 </form>
-{{/if}}
-
 
 {{> comments post.comments}}
 

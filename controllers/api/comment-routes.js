@@ -22,16 +22,25 @@ router.get('/', (req, res) => {
 
 //create comment
 router.post('/', (req, res) => {
+    console.log('hello?',
+        req.session,
+        req.body
+    );
     if (req.session) {
         const { comment_text, post_id = [] } = req.body;
         Comment.create({
             comment_text: comment_text,
+            user_id: req.session.user_id,
             post_id: post_id,
-            user_id: req.session.user_id
+
         })
-            .then(commentData => res.json(commentData))
+            .then(commentData => {
+                console.log(commentData, "------------------this is what im trying to find");
+                return res.json(commentData);
+            })
             .catch(err => {
                 res.status(400).json(err);
+                console.log(err);
             });
     }
 });

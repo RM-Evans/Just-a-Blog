@@ -2,9 +2,9 @@
     {{#each this}}
     <section class="comment">
         <div class='username'>
-            {{User.username}}
+            {{user.username}}
         </div>
-        <div class="time-stamp">{{timeStamp created_at}}</div>
+        <div class="time-stamp">{{format_date created_at}}</div>
         <div class="comment-content">
             {{content}}
         </div>

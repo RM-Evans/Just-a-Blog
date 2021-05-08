@@ -80,11 +80,11 @@ router.get('/:id', (req, res) => {
 //create post
 router.post('/', (req, res) => {
 
-    const { title, content = [] } = req.body;
+    const { title, post_body = [] } = req.body;
 
     Post.create({
         title: title,
-        content: content,
+        post_body: post_body,
         user_id: req.session.user_id
     })
         .then(postData => res.json(postData))
@@ -99,12 +99,12 @@ router.post('/', (req, res) => {
 //update a post by ID
 router.put('/:id', (req, res) => {
 
-    const { title, content = [] } = req.body;
+    const { title, post_body = [] } = req.body;
 
-    Blog.update(
+    Post.update(
         {
             title: title,
-            content: content
+            post_body: post_body
         },
         {
             where: {

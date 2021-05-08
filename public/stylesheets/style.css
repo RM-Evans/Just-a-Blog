@@ -1,20 +1,20 @@
 * {
 	box-sizing: border-box;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	background-color: rgb(124, 191, 194);
 }
 
 body,
 html {
 	height: 100%;
 	padding: 0;
-	margin: 0;
+	margin: 2.5%;
 	font-family: sans-serif;
-	color: #333;
+	color: rgb(0, 0, 0);
 }
 
 a {
-	text-decoration: none;
-	color: #225ca3;
+	color: #000000;
 	font-weight: bold;
 	transition: color 0.1s;
 }
@@ -24,11 +24,11 @@ a {
 }
 
 .submit-btn {
-	background-color: steelblue;
+	background-color: rgb(192, 192, 192);
 	border: 0;
 	margin-top: 15px;
 	padding: 2%;
-	color: white;
+	color: rgb(0, 0, 0);
 	font-weight: bold;
 	transition: background-color 0.1s;
 	cursor: pointer;
@@ -37,8 +37,8 @@ a {
 }
 
 button:hover {
-	background-color: blueviolet;
-	transition: 0.5s;
+	background-color: rgb(114, 114, 114);
+	transition: 0.2s;
 }
 
 .post-list {
@@ -49,9 +49,10 @@ button:hover {
 
 textarea,
 input {
-	padding: 0.5%;
+	padding: 1%;
 	border-radius: 5px;
 	border: 1px solid #ccc;
+	background-color: #fff5eb;
 }
 
 textarea:focus,
@@ -94,7 +95,7 @@ main {
 	border-radius: 5px;
 	padding: 10px;
 	color: white;
-	background-color: steelblue;
+	background-color: rgb(95, 20, 20);
 }
 
 .new-post-link {
@@ -114,7 +115,11 @@ main {
 	margin-top: 10px;
 	padding: 10px;
 	color: white;
-	background-color: steelblue;
+	background-color: rgb(95, 20, 20);
+}
+
+.create-btn:hover {
+	cursor: pointer;
 }
 
 .delete-btn {
@@ -124,11 +129,11 @@ main {
 	margin-top: 10px;
 	padding: 10px;
 	color: white;
-	background-color: rgb(255, 44, 44);
+	background-color: rgb(95, 20, 20);
 }
 
 .create-link:hover {
-	background-color: darkslateblue;
+	background-color: rgb(194, 194, 194);
 }
 
 .btn-no-style {
@@ -137,7 +142,7 @@ main {
 	padding: 0;
 	cursor: pointer;
 	text-decoration: none;
-	color: #225ca3;
+	color: rgb(95, 20, 20);
 	font-size: 100%;
 	font-weight: bold;
 	transition: color 0.1s;
@@ -146,15 +151,15 @@ main {
 
 .btn-no-style:hover {
 	background: none;
-	color: #3486eb;
+	color: rgb(194, 194, 194);
 }
 
 .delete-post-btn {
-	background-color: #d41414;
+	background-color: rgb(95, 20, 20);
 }
 
 .delete-post-btn:hover {
-	background-color: #ff643d;
+	background-color: rgb(194, 194, 194);
 }
 
 .post {

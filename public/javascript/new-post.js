@@ -1,8 +1,8 @@
 async function newPost(event) {
     event.preventDefault();
-//*pay attention to these classes
+    //*pay attention to these classes
     const title = document.querySelector('input[name="post-title"]').value;
-    const post_body = document.querySelector('input[name="post-body"]').value;
+    const post_body = document.querySelector('textarea[name="post-body"]').value;
 
     const response = await fetch(`/api/posts`, {
         method: 'POST',
@@ -21,5 +21,5 @@ async function newPost(event) {
         alert(response.statusText);
     }
 }
-//*pay attention to classes
-document.querySelector('.new-post-form').addEventListener('submit', newPost);
+
+document.querySelector('.create-post-form').addEventListener('submit', newPost);
