@@ -12,6 +12,10 @@
     <div class='time-stamp'>Posted: {{format_date post.created_at}}</div>
 </article>
 
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
 <form id="comment-form">
     <div>
         <label for="comment-text">Add a New Comment:</label>
@@ -21,9 +25,9 @@
         <button type="submit" class='create-btn'>Add Comment</button>
     </div>
 </form>
-
-{{> comments post.comments}}
-
+{{else }}
+    <p>Login to leave a comment.</p>
+{{/if}}
 
 {{#if loggedIn}}
 <script src="/javascript/create-comment.js"></script>

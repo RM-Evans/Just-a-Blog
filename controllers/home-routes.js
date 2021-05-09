@@ -64,7 +64,12 @@ router.get('/signup', (req, res) => {
 router.get('/new-post', (req, res) => {
     console.log('dasdasdasdasdasdasdsad');
     if (req.session.loggedIn) {
-        res.render('new-post', { loggedIn: true });
+        const blankPost = {
+            id: '',
+            title: '',
+            content: ''
+        }
+        res.render('new-post', { post: blankPost, loggedIn: true });
     }
 });
 //make post call to 

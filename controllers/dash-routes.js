@@ -57,7 +57,7 @@ router.get('/edit/:id', (req, res) => {
             },
             {
                 model: Comment,
-                attributes: ['content', 'user_id', 'post_id', 'created_at'],
+                attributes: ['comment_text', 'user_id', 'post_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -69,7 +69,7 @@ router.get('/edit/:id', (req, res) => {
             if (postData) {
                 const post = postData.get({ plain: true });
 
-                res.render('edit-post', {
+                res.render('new-post', {
                     post,
                     loggedIn: req.session.loggedIn
                 });
